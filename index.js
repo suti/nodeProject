@@ -1,16 +1,20 @@
 /**
  * Created by suti on 2017/6/11.
  */
-let express = require('express');
-let app = express();
+"use strict";
+let express = require('express'),
+	request =require('request')
+let app = express()
 
-app.get('/', function (req, res) {
-	res.send('Hello World!');
-});
+app.get('/',(req, res,next)=>{
+	request('http://lixy.space/',(err,re,body)=>{
+		res.end(body)
+	})
+	next()
+})
 
-let server = app.listen(3000, function () {
-	let host = server.address().address;
-	let port = server.address().port;
+app.all('*',(req,res)=>{
+	console.log(Date.now())
+})
 
-	console.log('Example app listening at http://%s:%s', host, port);
-});
+app.listen(2333)
