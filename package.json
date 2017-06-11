@@ -1,0 +1,22 @@
+{
+  "name": "node_project",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suti/nodeProject.git"
+  },
+  "author": "suti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suti/nodeProject/issues"
+  },
+  "homepage": "https://github.com/suti/nodeProject#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
